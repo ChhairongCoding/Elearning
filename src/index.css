@@ -1,0 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.navHover {
+  @apply w-full h-full transition ease-in-out duration-500 px-2 rounded-sm;
+}
+
+.navHover:hover {
+  @apply bg-blue-600 text-white; /* Or any other styles for hover state */
+}
