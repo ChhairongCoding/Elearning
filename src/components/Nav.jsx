@@ -1,45 +1,46 @@
 // src/components/Nav.js
-import { Link, useLocation } from "react-router-dom"; // Ensure useLocation is imported
+import { Link, useLocation } from "react-router-dom";
 
 const Nav = () => {
-  const location = useLocation(); // Get the current location
-
+  const location = useLocation();
   return (
-    <div className="header flex justify-between h-16 items-center px-10 bg-gray-300">
-      <h1 className="text-3xl text-transform: uppercase font-bebas">Logo</h1>
-      <div className="menu-main flex gap-4 font-bebas text-2xl">
-        <Link
-          className={`navHover ${
-            location.pathname === "/" ? "bg-blue-600" : ""
-          }`}
-          to="/"
-        >
-          Home
-        </Link>
-        <Link
-          className={`navHover ${
-            location.pathname === "/course" ? "bg-blue-600" : ""
-          }`}
-          to="/course"
-        >
-          Course
-        </Link>
-        <Link
-          className={`navHover ${
-            location.pathname === "/about" ? "bg-blue-600" : ""
-          }`}
-          to="/about"
-        >
-          About
-        </Link>
-        <Link
-          className={`navHover ${
-            location.pathname === "/login" ? "bg-blue-600" : ""
-          }`}
-          to="/login"
-        >
-          Login
-        </Link>
+    <div id="nav" className="header h-16 sticky top-0 shadow-md bg-white z-10">
+      <div className="nav flex justify-between items-center h-full w-11/12 m-auto ">
+        <h1 className="text-3xl text-transform: uppercase font-bebas">Logo</h1>
+        <div className="menu-main flex gap-4 font-bebas text-2xl">
+          <Link
+            className={`navHover ${
+              location.pathname === "/" ? "bg-green-800 text-white" : ""
+            }`}
+            to="/"
+          >
+            Home
+          </Link>
+          <Link
+            className={`navHover ${
+              location.pathname === "/course" ? "bg-green-800 text-white" : ""
+            }`}
+            to="/course"
+          >
+            Course
+          </Link>
+          <Link
+            className={`navHover ${
+              location.pathname === "/about" ? "bg-green-800 text-white" : ""
+            }`}
+            to="/about"
+          >
+            About
+          </Link>
+          <Link
+            className={`navHover ${
+              location.pathname === "/login" ? "bg-green-800 text-white" : ""
+            }`}
+            to="/login"
+          >
+            Login
+          </Link>
+        </div>
       </div>
     </div>
   );
