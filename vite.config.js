@@ -7,5 +7,5 @@ export default defineConfig({
   css: {
     postcss: path.resolve(__dirname, "./postcss.config.js"),
   },
-  base: "http://localhost:5173/",
+  base: mode === "development" ? "http://localhost:5173/" : "/",
 });
