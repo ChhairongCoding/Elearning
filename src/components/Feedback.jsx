@@ -1,17 +1,23 @@
 import React from "react";
-import StarRating from "./Star";
+import { Card } from "flowbite-react";
 
 const Feedback = (props) => {
-  const { id, name, comment, rated } = props;
+  const { id, name, comment } = props;
   return (
-    <article
-      className="backdrop-blur-sm bg-gray-400 bg-opacity-50 w-11/12 h-auto m-auto"
-      key={id}
-    >
-      <h1>{name}</h1>
-      <p>{comment}</p>
-      <StarRating rating={rated} />
-    </article>
+    <>
+      <Card
+        href="#"
+        className="relativ max-w-full backdrop-blur-lg bg-transparent   "
+        key={id}
+      >
+        <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+          {name}
+        </h5>
+        <p className="font-normal text-gray-700 dark:text-gray-400">
+          {comment}
+        </p>
+      </Card>
+    </>
   );
 };
 

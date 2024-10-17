@@ -1,7 +1,12 @@
 import React from "react";
+import Slide from "../components/Slide";
 
 const CourseScreen = () => {
-  return <div>Course Screen</div>;
+  return (
+    <main>
+      <Slide />
+    </main>
+  );
 };
 
 export default CourseScreen;
