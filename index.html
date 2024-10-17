@@ -2,12 +2,233 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
+    <title>Porsche History/Home-page</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="icon" href="images/Porsche-Logo.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <div class="container">
+      <header>
+        <div class="nav">
+          <div class="navication-left">
+            <div class="hamburger-menu" id="hamburgerMenu">
+              <div class="line" id="line1"></div>
+              <div class="line" id="line2"></div>
+              <div class="line" id="line3"></div>
+            </div>
+            <div class="sideLeft" id="list">
+              <ul>
+                <li onclick='window.location.href="/"'><a>Home</a></li>
+                <li onclick='window.location.href="/widget/model.html"'>
+                  <a>Models</a>
+                </li>
+                <li onclick='window.location.href="/widget/service.html"'>
+                  <a>Servies</a>
+                </li>
+                <li><a href="#">Experience</a></li>
+                <li><a href="#">My Porsche</a></li>
+                <li><a href="#">Vehicle Purchase</a></li>
+              </ul>
+              <div class="hamburger-menu-close" id="hamburgerMenuClose"></div>
+            </div>
+          </div>
+          <div class="logo-contain">
+            <h3 class="logo" id="logo"><a href="/">Porsche</a></h3>
+          </div>
+          <div class="search" id="search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+        </div>
+      </header>
+
+      <main id="body">
+        <div class="hero">
+          <div class="image-hero index">
+            <!-- <img src="images/Porsch911Legend.avif" alt="" /> -->
+            <video autoplay muted loop>
+              <source
+                src="/video/On track in the new Porsche 911 GT3 RS.mp4"
+                type="video/mp4"
+              />
+            </video>
+
+            <div class="blur"></div>
+          </div>
+          <div class="history-911">
+            <h1>porsche 911 history</h1>
+            <p>
+              In 1974, the 911 Turbo proved that even the dream of a 911 could
+              be taken even further: with a fascinating symbiosis of outstanding
+              performance, confident elegance and pure emotion. Experience its
+              50th anniversary up close: at the wheel of the 911 Turbo 50 years.
+            </p>
+          </div>
+        </div>
+
+        <div class="section-2">
+          <div class="wrapper">
+            <div class="the-legend-text">
+              <h2>The legend of the 911 Turbo.</h2>
+            </div>
+            <div class="hero-911">
+              <img src="images/hero.avif" alt="" />
+            </div>
+          </div>
+          <div class="line-section"></div>
+          <div class="line-section"></div>
+          <div class="line-section"></div>
+          <div class="line-section"></div>
+          <div class="back"></div>
+        </div>
+
+        <div class="section-3">
+          <div class="section-left">
+            <div class="contain-img">
+              <img
+                src="images/AB088322737743A391C69BC521E73B9A_F72E94F25E2B4007BBD83B4CCE432C66_045-model-technical-highlights-1600x1125_dark.avif"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="section-right">
+            <div class="top">
+              <h1>Porsche</h1>
+              <h1>911</h1>
+              <p class="long-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
+                nesciunt doloribus eveniet eum cumque voluptatibus voluptas,
+                incidunt aut excepturi tenetur sapiente porro voluptatum dolorum
+                assumenda accusamus harum, rem vel dolor. Lorem ipsum dolor sit
+                amet consectetur, adipisicing elit. Nemo, facilis non.
+                Dignissimos distinctio aliquid ipsum nobis quod perferendis,
+                officiis illum voluptatem laborum, dolorem magnam aut ad,
+                praesentium possimus aperiam. Deserunt!
+              </p>
+
+              <div class="performance">
+                <div class="row">
+                  <h1>2.7 <span>s</span></h1>
+                  <p>Acceleration 0 - 100 km/h with Sport Chrono Package</p>
+                </div>
+                <div class="row">
+                  <h1>478 <span>kw</span>/650 <span>ps</span></h1>
+                  <p>Power (kW)/Power (PS)</p>
+                </div>
+                <div class="row">
+                  <h1>330 <span>km/h</span></h1>
+                  <p>Top speed</p>
+                </div>
+                <div class="row-btn">
+                  <button>View all texhnical details</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-4">
+          <div class="marque">
+            <div class="left-right" id="leftToRight">
+              <div class="block">
+                <h1>GT RS series</h1>
+              </div>
+              <div class="block">
+                <h1>GT RS series</h1>
+              </div>
+              <div class="block">
+                <h1>GT RS series</h1>
+              </div>
+              <div class="block">
+                <h1>GT RS series</h1>
+              </div>
+              <div class="block">
+                <h1>GT RS series</h1>
+              </div>
+              <div class="block">
+                <h1>GT RS series</h1>
+              </div>
+              <div class="block">
+                <h1>GT RS series</h1>
+              </div>
+              <div class="block">
+                <h1>GT RS series</h1>
+              </div>
+            </div>
+          </div>
+          <div class="wrapper">
+            <div class="row">
+              <div class="col">
+                <img src="images/section4/porsche-zoom1.webp" alt="" />
+              </div>
+              <div class="col">
+                <img src="images/section4/porsche-zoom2.webp" alt="" />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <img src="images/section4/porsche-zoom3.webp" alt="" />
+              </div>
+              <div class="col">
+                <img src="images/section4/porsche-zoom4.webp" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <footer>
+      <div class="container">
+        <div class="logoFoot">
+          <div class="blog-logo">
+            <h1 class="txt-1">Porcshe</h1>
+          </div>
+          <div class="blog">
+            <p>
+              This is my list about my teamwork on the final project . pleas
+              check the name on my list!
+            </p>
+          </div>
+        </div>
+        <div class="about">
+          <h1>Buit Member</h1>
+          <ul>
+            <li>chhin chhairong</li>
+            <li>Thea kichheng</li>
+            <li>Cheam Huyyim</li>
+            <li>Cheam Limong</li>
+          </ul>
+        </div>
+      </div>
+      <div class="social">
+        <h1>contact</h1>
+        <div class="social-contact">
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-x-twitter"></i>
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-linkedin"></i>
+          <i class="fa-brands fa-github"></i>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; Copyright. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
