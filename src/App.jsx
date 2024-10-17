@@ -5,6 +5,8 @@ import CourseScreen from "./screens/CourseScreen";
 import AboutScreen from "./screens/AboutScreen";
 import LoginScreen from "./screens/LoginScreen";
 import Nav from "./components/Nav";
+import { Footer } from "flowbite-react";
+import FooterPart from "./components/FooterPart";
 
 // A simple 404 component
 const NotFound = () => (
@@ -29,6 +31,7 @@ function App() {
           <Route path="/login" element={<LoginScreen />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
+        <FooterPart />
       </div>
     </BrowserRouter>
   );
