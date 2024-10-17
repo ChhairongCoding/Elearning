@@ -120,7 +120,7 @@ const HomeScreen = () => {
       <div className="section-4-feedback w-full bg-gray-200 h-screen">
         <div className="row text-center">
           <h1>Feedback</h1>
-          <p>នេះជា feedback ការគាំទ្ររបស់យើង</p>
+          <p>នេះជា feedback ការគាំទ្ររបស់យើង?</p>
         </div>
         <div className="row grid w-11/12 m-auto grid-cols-[repeat(2,1fr)] grid-rows-[repeat(2,1fr)]">
           {feedbackData.map((f) => (
