@@ -5,7 +5,7 @@ import dataCard from "../data/Data";
 import Card from "../components/Card";
 import Partner from "../assets/home/partner-logo/Setec_Logo.png";
 import feedbackData from "../data/FeedbackData";
-import Feedback from "../components/feedback";
+import Feedback from "../components/Feedback";
 const HomeScreen = () => {
   const navigate = useNavigate();
 
