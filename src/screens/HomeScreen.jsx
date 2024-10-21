@@ -122,7 +122,8 @@ const HomeScreen = () => {
             នេះជា feedback ការគាំទ្ររបស់យើង?
           </p>
         </div>
-        <div className="row grid w-11/12 m-auto grid-cols-[repeat(2,1fr)] justify-center grid-rows-[repeat(2,1fr)] gap-2">
+        <div className="row grid w-11/12 m-auto grid-cols-[repeat(2,1fr)] justify-center grid-rows-[repeat(2,1fr)] gap-2  ">
+          <span className="block w-64 h-64 bg-gradient-to-r from-green-500 to-green-300 blur-lg left-[50%] top-[65%] -translate-y-2/4 -translate-x-2/4 z-0 rounded-[50%] absolute"></span>
           {feedbackData.map((f) => (
             <Feedback {...f} key={f.id} />
           ))}
