@@ -1,10 +1,9 @@
 import { Footer } from "flowbite-react";
-import { Link } from "react-router-dom";
 
 function FooterPart() {
   return (
-    <Footer container>
-      <div className="w-full text-center">
+    <Footer container className="relative">
+      <div className="w-full text-center ">
         <div className="w-full justify-between sm:flex sm:items-center sm:justify-between">
           <Footer.Brand
             href="https://flowbite.com"
