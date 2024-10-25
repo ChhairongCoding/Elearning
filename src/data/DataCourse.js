@@ -1,7 +1,7 @@
 import jsLogo from "../assets/home/CardImage/JavaScript_logo_2.svg";
 import htmlCssLogo from "../assets/home/CardImage/css3-html.jpg";
 import reactTailwindLogo from "../assets/home/CardImage/react-tailwind.jpg";
-import Vuejs from "../assets/home/CardImage/Vue2883.jpg";
+import Vuejs from "../assets/home/CardImage/vue2883.jpg";
 
 const DataCourse = [
   {
