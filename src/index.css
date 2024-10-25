@@ -27,5 +27,5 @@
 }
 
 .card-hover:hover {
-  @apply scale-105;
+  @apply scale-y-[1.02];
 }
