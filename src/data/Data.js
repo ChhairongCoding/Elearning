@@ -11,6 +11,7 @@ const dataCard = [
     review:
       "Lorem Lorem ipsum dolor sit amet ipsum  ipsum dolor sitdolor sit amet consectetur...",
     price: 59,
+    category: "program",
   },
   {
     id: 2,
@@ -20,6 +21,7 @@ const dataCard = [
     review:
       "Lorem ipsum  ipsum dolor sit amet consectetur dolor sit amet consectetur...",
     price: 59,
+    category: "design",
   },
   {
     id: 3,
@@ -29,6 +31,7 @@ const dataCard = [
     review:
       "Lorem ipsum doloripsum dolor sit amet consectetur sit amet consectetur...",
     price: 59,
+    category: "network",
   },
 ];
 
