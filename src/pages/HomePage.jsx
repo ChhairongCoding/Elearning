@@ -7,7 +7,9 @@ import Partner from "../assets/home/partner-logo/Setec_Logo.png";
 import feedbackData from "../data/FeedbackData";
 import Feedback from "../components/Feedback";
 
-const HomeScreen = () => {
+import Categories from "../components/Categories";
+
+const HomePage = () => {
   const navigate = useNavigate();
 
   return (
@@ -129,8 +131,12 @@ const HomeScreen = () => {
           ))}
         </div>
       </div>
+
+      <div className="section-5 categories">
+        <Categories />
+      </div>
     </main>
   );
 };
 
-export default HomeScreen;
+export default HomePage;

@@ -1,12 +1,19 @@
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Link,
+  useLocation,
+} from "react-router-dom";
 import "./App.css";
-import HomeScreen from "./screens/HomeScreen";
-import CourseScreen from "./screens/CourseScreen";
-import AboutScreen from "./screens/AboutScreen";
-import LoginScreen from "./screens/LoginScreen";
+
+import LoginPage from "./pages/LoginPage";
 import Nav from "./components/Nav";
-import { Footer } from "flowbite-react";
 import FooterPart from "./components/FooterPart";
+import SignUp from "./components/SignUp";
+import HomePage from "./pages/HomePage";
+import CoursePage from "./pages/CoursePage";
+import AboutPage from "./pages/AboutPage";
 
 // A simple 404 component
 const NotFound = () => (
@@ -19,20 +26,35 @@ const NotFound = () => (
   </div>
 );
 
+function AppContent() {
+  const location = useLocation();
+
+  return (
+    <div className="w-full">
+      {/* Conditionally render Nav based on the current route */}
+      {location.pathname !== "/login" && location.pathname !== "/signup" && (
+        <Nav />
+      )}
+
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/course" element={<CoursePage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+      {location.pathname !== "/login" && location.pathname !== "/signup" && (
+        <FooterPart />
+      )}
+    </div>
+  );
+}
+
 function App() {
   return (
     <BrowserRouter>
-      <div className="w-full">
-        <Nav />
-        <Routes>
-          <Route path="/" element={<HomeScreen />} />
-          <Route path="/course" element={<CourseScreen />} />
-          <Route path="/about" element={<AboutScreen />} />
-          <Route path="/login" element={<LoginScreen />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-        <FooterPart />
-      </div>
+      <AppContent />
     </BrowserRouter>
   );
 }

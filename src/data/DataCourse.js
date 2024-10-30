@@ -84,6 +84,7 @@ const DataCourse = [
     review:
       "Lorem ipsum doloripsum dolor sit amet consectetur sit amet consectetur...",
     price: 59,
+    category: "program",
   },
   {
     id: 10,
@@ -93,6 +94,7 @@ const DataCourse = [
     review:
       "Lorem Lorem ipsum dolor sit amet ipsum  ipsum dolor sitdolor sit amet consectetur...",
     price: 59,
+    category: "program",
   },
   {
     id: 11,
@@ -102,6 +104,7 @@ const DataCourse = [
     review:
       "Lorem ipsum  ipsum dolor sit amet consectetur dolor sit amet consectetur...",
     price: 59,
+    category: "program",
   },
   {
     id: 12,
@@ -111,6 +114,7 @@ const DataCourse = [
     review:
       "Lorem ipsum doloripsum dolor sit amet consectetur sit amet consectetur...",
     price: 59,
+    category: "design",
   },
   {
     id: 13,
@@ -120,6 +124,7 @@ const DataCourse = [
     review:
       "Lorem ipsum doloripsum dolor sit amet consectetur sit amet consectetur...",
     price: 59,
+    category: "network",
   },
 ];
 
