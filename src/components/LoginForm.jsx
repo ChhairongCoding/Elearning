@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Label, TextInput, Checkbox, Button } from "flowbite-react";
+import { Label, TextInput, Checkbox } from "flowbite-react";
 import { Link } from "react-router-dom";
 
 const LoginForm = () => {
@@ -21,7 +21,7 @@ const LoginForm = () => {
         onSubmit={handleSubmit}
       >
         <div className='content-[""] block w-[100%] h-[100%] absolute bg-green-400 blur-3xl rounded-[50%] -top-16 -left-16'></div>
-        <div className="login block h-full text-center uppercase font-sans font-bold text-xl relative">
+        <div className="login block h-full text-center uppercase font-mono font-bold text-3xl relative">
           <h1>Login</h1>
         </div>
         <div className="mb-5">
@@ -84,7 +84,7 @@ const LoginForm = () => {
           Submit
         </button>
         <div className="other-log relative block w-full text-center py-6 cursor-pointer">
-          <h2>Or Sign Up with</h2>
+          <h2>Or Sign In with</h2>
           <div className="social flex justify-center gap-6 mt-4 ">
             <svg
               class="w-10 h-10 text-gray-800 dark:text-white hover:bg-green-700 rounded-[50%] transition-all ease-in-out  duration-200 "

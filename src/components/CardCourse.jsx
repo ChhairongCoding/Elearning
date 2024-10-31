@@ -16,7 +16,9 @@ const CardCourse = (props) => {
         />
       </div>
       <div className="txt px-4 pt-5 flex justify-between items-center leading-4 ">
-        <h1 className="font-bebas text-[30px]">{courseName}</h1>
+        <h1 className="font-mono uppercase font-bold text-[26px]">
+          {courseName}
+        </h1>
         <StarRating rating={rated} />
       </div>
       <p className="font-sans px-4 py-4 text-[20px] text-gray-600">{review}</p>

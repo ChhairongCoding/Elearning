@@ -8,7 +8,7 @@ const Funder = (props) => {
       <img className="object-contain w-1/2 h-full " src={img} alt="" />
       <div className="flex-1 relative py-2">
         <h1 className="font-bebas ">{name}</h1>
-        <p className="text-lg leading-5 ">{detail}</p>
+        <p className="text-lg leading-5 text-gray-300">{detail}</p>
         <button
           className="text-lg  block border backdrop-blur-sm
          hover:bg-green-500 rounded-sm px-2 hover:scale-105 transition-all ease-in-out duration-100 absolute left-0 bottom-2 w-full uppercase font-mono font-bold "

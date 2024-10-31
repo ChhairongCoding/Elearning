@@ -7,7 +7,9 @@ const AboutPage = () => {
   return (
     <main className="h-auto py-10">
       <div className="section-1 w-11/12 m-auto mb-10 ">
-        <h2 className="text-center font-bebas text-6xl">About us</h2>
+        <h2 className="text-center font-mono font-bold uppercase text-5xl ">
+          About us
+        </h2>
         <p className="text-justify font-sans text-xl text-gray-600 ">
           Our journey started with a simple idea: to create a learning space
           that adapts to the needs of today’s digital learners. Founded in{" "}
@@ -22,7 +24,7 @@ const AboutPage = () => {
         <span className="block w-full h-full bg-gradient-to-r from-green-500 from-10% to-blue-500 to-100% blur-sm absolute"></span>
 
         <div className="banner-box w-full h-auto py-20 flex ">
-          <div className="relative font-bebas content-center w-[10%] -rotate-90 text-4xl text-center text-white ">
+          <div className="relative font-mono uppercase font-bold content-center w-[10%] -rotate-90 text-5xl  text-center text-white ">
             <h2>our funder</h2>
           </div>
           <div className="box-card text-white  bottom-0 w-[90%] gap-5 m-auto grid grid-cols-3 pr-20 ">
