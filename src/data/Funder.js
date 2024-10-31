@@ -1,5 +1,5 @@
-import Rong from "../assets/Avatar/manAvatar.png";
-import JameSon from "../assets/Avatar/oldMan-avatar.png";
+import Rong from "../assets/Avatar/man.png";
+import JameSon from "../assets/Avatar/oldMan.png";
 import HeroGirl from "../assets/Avatar/woman.png";
 
 const Funder = [

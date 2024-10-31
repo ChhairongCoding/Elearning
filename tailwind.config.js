@@ -5,13 +5,28 @@ module.exports = {
 
   theme: {
     extend: {
-      fontFamily: {
+      fontfamily: {
         bebas: ["Bebas Neue", "sans-serif"],
       },
       gridTemplateColumns: {
         21: ["repeat(2,1fr)"],
       },
+      animation: {
+        spin2: "spin 20s linear infinite ",
+        ping2: "ping 20s linear infinite",
+      },
     },
   },
-  plugins: [flowbite.plugin()],
+  plugins: [
+    flowbite.plugin(),
+    function ({ addUtilities }) {
+      addUtilities({
+        ".overflow-hidden-top": {
+          position: "relative",
+          overflowY: "hidden",
+          marginTop: "-1px",
+        },
+      });
+    },
+  ],
 };
