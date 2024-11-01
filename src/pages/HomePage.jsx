@@ -7,27 +7,65 @@ import Partner from "../assets/home/partner-logo/Setec_Logo.png";
 import feedbackData from "../data/FeedbackData";
 import Feedback from "../components/Feedback";
 import yungMan from "../assets/home/young-man.png";
+import { delay, motion } from "framer-motion";
 
+const variate = {
+  hiidden: {
+    opacity: 0,
+    x: "100vw",
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      type: "tween",
+      delay: 0.3,
+    },
+  },
+};
 const HomePage = () => {
   const navigate = useNavigate();
-
   return (
-    <main className="w-full h-auto overflow-hidden">
+    <motion.main
+      variants={variate}
+      initial="hiidden"
+      animate="visible"
+      className="w-full h-auto overflow-hidden"
+    >
       <div className="hero grid grid-cols-21 w-11/12 m-auto justify-center">
         <div className="row-1 h-[600px] content-center overflow-x-hidden over  max-sm:h-[400px]  ">
           <div className="text-[24px] font-sans text-gray-600  ">
-            <h1 className="text font-mono font-bold  uppercase text-[70px] tracking-tight text-green-800 max-sm:text-[40px] max-sm:leading-[40px] max-lg:text-[60px] max-lg:leading-[55px] md:leading-[75px] ">
+            <motion.h1
+              initial={{ x: -100, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ delay: 1, type: "tween", stiffness: 120 }}
+              className="text font-mono font-bold  uppercase text-[70px] tracking-tight text-green-800 max-sm:text-[40px] max-sm:leading-[40px] max-lg:text-[60px] max-lg:leading-[55px] md:leading-[75px] "
+            >
               Welcome To My <br />
               <span>E-leaning</span>
-            </h1>
-            <p className="max-sm:text-[16px] max-sm:h-[150px] max-sm:overflow-hidden max-md:h-[180px] max-md:overflow-hidden max-md:text-[20px] font-sans">
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{
+                delay: 0.9,
+                type: "tween",
+                duration: 1.5,
+              }}
+              className="max-sm:text-[16px] max-sm:h-[150px] max-sm:overflow-hidden max-md:h-[180px] max-md:overflow-hidden max-md:text-[20px] font-sans"
+            >
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae
               ipsa voluptatibus blanditiis, fugit obcaecati doloremque deserunt
               vitae ipsum eum possimus laboriosam cumque, enim ut. Dolores sequi
               numquam ullam placeat porro.
-            </p>
+            </motion.p>
           </div>
-          <div className="btn w-full h-auto pt-7 font-bebas text-[20px]">
+          <motion.div
+            initial={{ x: -500 }}
+            animate={{ x: 0 }}
+            transition={{ delay: 1.2, type: "spring", stiffness: 50 }}
+            className="btn w-full h-auto pt-7 font-bebas text-[20px]"
+          >
             <button
               className="btn-primary btn-primary-Hover all ease-in-out duration-500 max-sm:text-[14px]"
               onClick={() => navigate("/about")}
@@ -40,11 +78,16 @@ const HomePage = () => {
             >
               Go to Course
             </button>
-          </div>
+          </motion.div>
         </div>
-        <div className="row-2 w-full block content-center">
+        <motion.div
+          initial={{ x: 500, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ delay: 0.9, type: "spring", stiffness: 30 }}
+          className="row-2 w-full block content-center"
+        >
           <img className="w-full " src={Hero} alt="hero" />
-        </div>
+        </motion.div>
       </div>
 
       <div className="section-2-project h-auto bg-gray-200  py-10 relative z-10 ">
@@ -158,7 +201,7 @@ const HomePage = () => {
           </divv>
         </div>
       </div>
-    </main>
+    </motion.main>
   );
 };
 

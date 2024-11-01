@@ -17,16 +17,5 @@ module.exports = {
       },
     },
   },
-  plugins: [
-    flowbite.plugin(),
-    function ({ addUtilities }) {
-      addUtilities({
-        ".overflow-hidden-top": {
-          position: "relative",
-          overflowY: "hidden",
-          marginTop: "-1px",
-        },
-      });
-    },
-  ],
+  plugins: [flowbite.plugin()],
 };
