@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Label, TextInput, Checkbox } from "flowbite-react";
 import { Link } from "react-router-dom";
-
+import { delay, motion } from "framer-motion";
 const LoginForm = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -16,7 +16,10 @@ const LoginForm = () => {
 
   return (
     <>
-      <form
+      <motion.form
+        initail={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ type: "tween", delay: 0.6 }}
         className="max-w-sm mx-auto border p-6 relative overflow-hidden border-green-300"
         onSubmit={handleSubmit}
       >
@@ -36,7 +39,7 @@ const LoginForm = () => {
             id="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            placeholder="name@flowbite.com"
+            placeholder="name@gmail.com"
             required
             className="w-full"
           />
@@ -135,7 +138,7 @@ const LoginForm = () => {
             Sign Up
           </Link>
         </div>
-      </form>
+      </motion.form>
     </>
   );
 };

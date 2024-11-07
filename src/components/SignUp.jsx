@@ -1,9 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Label, TextInput, Checkbox } from "flowbite-react";
+import { motion } from "framer-motion";
 
 const SignUp = () => {
   return (
-    <div className="h-[100vh] overflow-hidden content-center relative bg-gray-300">
+    <motion.div
+      initail={{ opacity: 0, x: 300 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.6 }}
+      className="h-[100vh] overflow-hidden content-center relative bg-gray-300"
+    >
       <form className="max-w-sm mx-auto border p-6 relative overflow-hidden border-green-300">
         <div className='content-[""] block w-[100%] h-[100%] absolute bg-green-400 blur-3xl rounded-[50%] -bottom-16 -right-16 z-0'></div>
         <div className="login block h-full text-center uppercase font-mono font-bold text-3xl relative mb-4">
@@ -11,12 +18,12 @@ const SignUp = () => {
         </div>
         <div className="grid md:grid-cols-2 md:gap-6">
           <div className="relative z-0 w-full mb-5 group">
-            <input
+            <TextInput
               type="text"
               name="floating_first_name"
               id="floating_first_name"
               className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-              placeholder=" "
+              placeholder=""
               required
             />
             <label className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
@@ -24,7 +31,7 @@ const SignUp = () => {
             </label>
           </div>
           <div className="relative z-0 w-full mb-5 group">
-            <input
+            <TextInput
               type="text"
               name="floating_last_name"
               id="floating_last_name"
@@ -38,12 +45,12 @@ const SignUp = () => {
           </div>
         </div>
         <div className="relative z-0 w-full mb-5 group">
-          <input
+          <TextInput
             type="email"
             name="floating_email"
             id="floating_email"
             className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-            placeholder=" "
+            placeholder="name@gmail.com"
             required
           />
           <label className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
@@ -52,7 +59,7 @@ const SignUp = () => {
         </div>
 
         <div className="relative z-10 w-full mb-5 group">
-          <input
+          <TextInput
             type="password"
             name="floating_password"
             id="floating_password"
@@ -65,7 +72,7 @@ const SignUp = () => {
           </label>
         </div>
         <div className="relative z-0 w-full mb-5 group">
-          <input
+          <TextInput
             type="password"
             name="repeat_password"
             id="floating_repeat_password"
@@ -79,7 +86,7 @@ const SignUp = () => {
         </div>
         <div className="grid  md:gap-6 relative">
           <div className="relative z-10 w-full mb-5 group">
-            <input
+            <TextInput
               type="tel"
               pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
               name="floating_phone"
@@ -95,7 +102,7 @@ const SignUp = () => {
         </div>
 
         <div className="check relative flex py-2 ">
-          <input type="checkbox" className="mr-5 active:border-none" />
+          <Checkbox type="checkbox" className="mr-5 active:border-none" />
           <div>
             <p className="relative -top-1">
               I agree the to the{" "}
@@ -151,7 +158,7 @@ const SignUp = () => {
           </div>
         </div>
       </form>
-    </div>
+    </motion.div>
   );
 };
 

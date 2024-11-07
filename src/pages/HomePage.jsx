@@ -8,6 +8,7 @@ import feedbackData from "../data/FeedbackData";
 import Feedback from "../components/Feedback";
 import yungMan from "../assets/home/young-man.png";
 import { delay, easeIn, motion } from "framer-motion";
+import { useState, useEffect } from "react";
 
 const variate = {
   hiidden: {
@@ -39,6 +40,23 @@ const scroll = {
 
 const HomePage = () => {
   const navigate = useNavigate();
+  const [windowDimensions, setWindowDimensions] = useState({
+    width: window.innerWidth,
+    height: window.innerHeight,
+  });
+
+  // Update window dimensions on resize
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowDimensions({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <motion.main
       variants={variate}
@@ -110,12 +128,12 @@ const HomePage = () => {
       </div>
 
       <motion.div
-        initial={{ opacity: 0, x: -500 }}
-        whileInView={{ opacity: 1, x: 0 }}
+        initial={{ opacity: 0.5, x: -300 }}
+        whileInView={{ opacity: 2, x: 0 }}
         viewport={{ once: true }}
         className="section-2-project h-auto bg-gray-200  py-10 relative z-10 "
       >
-        <div className="flex row1 text-[60px] w-11/12 m-auto font-mono uppercase font-bold items-center ">
+        <div className="flex row1 text-[60px] w-11/12 m-auto font-mono uppercase font-bold items-center max-md:text-4xl  ">
           <h2 className="w-1/3 ">Popular Course</h2>
         </div>
         <motion.div
@@ -123,7 +141,7 @@ const HomePage = () => {
           whileInView={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ type: "tween", easeIn, duration: 0.6 }}
           viewport={{ once: true }}
-          className="row1 w-11/12 h-auto bg-gray-200 grid grid-cols-[repeat(3,1fr)] gap-4 py-16 m-auto "
+          className="row1 w-11/12 h-auto bg-gray-200 grid grid-cols-[repeat(3,1fr)] gap-4 py-16 m-auto max-lg:grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1"
         >
           {dataCard.map((d) => (
             <Card {...d} key={d.id} />
@@ -138,7 +156,7 @@ const HomePage = () => {
         >
           <div className="view-all-course pl-2 ">
             <Link
-              className="btn-second btn-second-Hover px-3 all ease-in-out duration-500 "
+              className="btn-second btn-second-Hover px-3 all ease-in-out duration-500 max-md:text-4xl"
               to="/course"
             >
               view all course
@@ -154,10 +172,10 @@ const HomePage = () => {
         className="section-3-partner  w-full h-auto py-[40px] relative"
       >
         <div className="container w-12/12 m-auto">
-          <div className="text text-center uppercase font-mono font-bold text-5xl text-green-800 ">
+          <div className="text text-center uppercase font-mono font-bold text-5xl text-green-800 max-md:text-4xl ">
             <h1>Our Partners</h1>
           </div>
-          <div className="partners w-11/12 m-auto grid grid-cols-[repeat(5,1fr)] gap-5">
+          <div className="partners w-11/12 m-auto grid grid-cols-[repeat(5,1fr)] gap-5 max-md:text-sm">
             <motion.div
               initial={{ x: 300, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
@@ -165,10 +183,10 @@ const HomePage = () => {
               viewport={{ once: true }}
               className="partner h-auto w-full py-4  "
             >
-              <div className="logo-partner  w-auto h-auto m-auto ">
+              <div className="logo-partner w-auto h-auto m-auto ">
                 <img className="w-full m-auto pb-2 " src={Partner} alt="" />
               </div>
-              <div className="brand-name text-center uppercase font-sans text-[20px] font-[700] text-green-800">
+              <div className="brand-name text-center uppercase font-sans text-[20px] font-[700] text-green-800 ">
                 setec institute
               </div>
             </motion.div>
@@ -260,7 +278,7 @@ const HomePage = () => {
 
       <div className="section-5 relative bg-gray-200 pt-10 ">
         <motion.div
-          initial={{ x: 1500, opacity: 0 }}
+          initial={{ x: 500, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{
             type: "tween",
@@ -269,9 +287,9 @@ const HomePage = () => {
           }}
           viewport={{ once: true }}
           style={{
-            clipPath: "polygon(0% 10%, 100% 0% , 100% 100% ,0% 100% )",
+            clipPath: "polygon(0% 10%, 100% 0%, 100% 100%, 0% 100%)",
           }}
-          className='absolute content-[""] block bg-green-400 w-full h-full -z-0  bottom-0  '
+          className='absolute content-[""] block bg-green-400 w-full h-full -z-0 bottom-0'
         ></motion.div>
 
         <motion.div
@@ -279,24 +297,27 @@ const HomePage = () => {
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.8 }}
           viewport={{ once: true }}
-          className="contain flex w-8/12 m-auto content-center items-center"
+          className="contain grid grid-cols-2 w-8/12 m-auto content-center items-center max-sm:grid-cols-1"
         >
-          <div className="relative  ">
-            <img className="w-auto" src={yungMan} alt="" />
+          <div className="relative">
+            <img
+              className="w-9/12 max-sm:m-auto"
+              src={yungMan}
+              alt="Young Man"
+            />
           </div>
-          <divv className="relative h-auto text-white">
-            <h1 className="text-5xl font-mono font-bold uppercase">
-              {" "}
-              Become an instructor
+          <div className="relative h-auto w-full text-white max-sm:text-center pb-5">
+            <h1 className="text-5xl font-mono font-bold uppercase max-md:text-4xl">
+              Become an Instructor
             </h1>
             <p className="text-slate-300">
               Instructors from around the world teach millions of learners on
               Udemy. We provide the tools and skills to teach what you love.
             </p>
-            <button className="bg-green-600 mt-4 p-2 font-mono font-bold rounded-sm  hover:bg-green-500 all ease-in-out duration-200 hover:px-3 border-green-600 ">
-              Let Start
+            <button className="bg-green-600 mt-4 p-2 font-mono font-bold rounded-sm hover:bg-green-500 transition duration-200">
+              Let's Start
             </button>
-          </divv>
+          </div>
         </motion.div>
       </div>
     </motion.main>

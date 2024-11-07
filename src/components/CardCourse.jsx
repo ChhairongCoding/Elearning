@@ -1,10 +1,11 @@
 import React from "react";
 import StarRating from "./Star";
+import { motion } from "framer-motion";
 
 const CardCourse = (props) => {
   const { id, img, courseName, rated, review } = props;
   return (
-    <article
+    <motion.article
       className="shadow-md shadow-slate-400 bg-white h-auto w-full pb-4 card-hover all ease-in-out duration-500 "
       key={id}
     >
@@ -27,7 +28,7 @@ const CardCourse = (props) => {
           Buy Course
         </button>
       </div>
-    </article>
+    </motion.article>
   );
 };
 
