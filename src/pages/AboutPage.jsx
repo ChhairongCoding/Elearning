@@ -2,13 +2,19 @@ import React from "react";
 
 import TeacherList from "../data/Funder";
 import Teacher from "../components/Funder";
+import { easeIn, motion } from "framer-motion";
 
 const AboutPage = () => {
   return (
-    <main className="h-auto py-10">
+    <motion.main
+      initial={{ x: 500, opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
+      transition={{ ease: "easeIn" }}
+      className="h-auto py-10"
+    >
       <div className="section-1 w-11/12 m-auto mb-10 ">
         <h2 className="text-center font-mono font-bold uppercase text-5xl ">
-          About us
+          About <span className="text-green-500">us</span>
         </h2>
         <p className="text-justify font-sans text-xl text-gray-600 ">
           Our journey started with a simple idea: to create a learning space
@@ -21,13 +27,11 @@ const AboutPage = () => {
         </p>
       </div>
       <div className="section-2 w-full relative">
-        <span className="block w-full h-full bg-gradient-to-r from-green-500 from-10% to-blue-500 to-100% blur-sm absolute"></span>
-
-        <div className="banner-box w-full h-auto py-20 flex ">
-          <div className="relative font-mono uppercase font-bold content-center w-[10%] -rotate-90 text-5xl  text-center text-white ">
+        <div className="banner-box w-full h-auto py-20 flex bg-green-400 max-md:grid ">
+          <div className="relative font-mono uppercase font-bold content-center w-[10%] -rotate-90 text-5xl  text-center text-white  max-md:rotate-0 max-md:text-center max-md:w-full max-md:pb-5">
             <h2>our funder</h2>
           </div>
-          <div className="box-card text-white  bottom-0 w-[90%] gap-5 m-auto grid grid-cols-3 pr-20 ">
+          <div className="box-card text-white  bottom-0 w-[90%] gap-5 m-auto grid grid-cols-3 pr-20 max-md:grid-cols-1 ">
             {TeacherList.map((t) => (
               <Teacher {...t} key={t.id} />
             ))}
@@ -35,7 +39,7 @@ const AboutPage = () => {
         </div>
       </div>
       <div className="section-3"></div>
-    </main>
+    </motion.main>
   );
 };
 
